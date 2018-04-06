@@ -1,6 +1,6 @@
 package by.htp.carparking.dao;
 
-import by.htp.carparking.dao.impl.CarDBDaoImpl;
+import by.htp.carparking.dao.impl.CarDaoDBImpl;
 
 public class DAO {
 	
@@ -8,7 +8,7 @@ public class DAO {
 	
 	private static DAO instance;
 	
-	public final CarDBDaoImpl carDAO = new CarDBDaoImpl();
+	public final CarDaoDBImpl carDAO = new CarDaoDBImpl();
 	
 	public static DAO getDAO(){
         if (instance == null){
