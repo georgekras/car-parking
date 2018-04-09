@@ -4,13 +4,13 @@ import java.sql.SQLException;
 import java.util.List;
 
 import by.htp.carparking.dao.CarDao;
-import by.htp.carparking.dao.impl.CarDaoDBImpl;
+import by.htp.carparking.dao.DaoFactory;
 import by.htp.carparking.domain.Car;
 import by.htp.carparking.service.CarService;
 
 public class CarServiceImpl implements CarService {
 
-	private CarDao carDao = new CarDaoDBImpl();
+	private CarDao carDao = (CarDao) DaoFactory.getCarDao();
 	
 	@Override
 	public List<Car> getCarsList() throws SQLException {

@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 
 import by.htp.carparking.domain.Car;
 import by.htp.carparking.service.CarService;
-import by.htp.carparking.service.impl.CarServiceImpl;
+import by.htp.carparking.service.ServiceFactory;
 import by.htp.carparking.web.actions.BaseAction;
 
 public class CarViewAction implements BaseAction{
 
-	private CarService carService = new CarServiceImpl();
+	private CarService carService = ServiceFactory.getCarService();
 	
 	@Override
 	public String executeAction(HttpServletRequest request) throws IOException, SQLException {
